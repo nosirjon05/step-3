@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>step-2</title>
+  <link rel="stylesheet" href="main.css">
+  <style>
+    #pw-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.75);display:flex;align-items:center;justify-content:center;z-index:9999}
+    #pw-box{background:#fff;padding:24px;border-radius:8px;max-width:320px;width:90%;box-shadow:0 6px 24px rgba(0,0,0,0.3);text-align:center}
+    #pw-box input{width:100%;padding:8px;margin-top:12px;margin-bottom:8px;font-size:16px}
+    #pw-box button{padding:8px 12px;font-size:16px}
+  </style>
+</head>
+<body>
+  <div id="pw-overlay" aria-hidden="false">
+    <div id="pw-box" role="dialog" aria-modal="true" aria-labelledby="pw-title">
+      <h2 id="pw-title">Enter password to continue</h2>
+      <form id="pw-form">
+        <input id="pw-input" type="password" placeholder="Password"autocomplete="current-password" required />
+        <div>
+          <button type="submit">Enter</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Simple client-side gate. THIS IS NOT SECURE for protecting real content.
+    // Change the value below to set your password.
+    (function(){
+      const PASSWORD = '25-may'; // <-- set your password here
+      const overlay = document.getElementById('pw-overlay');
+      const form = document.getElementById('pw-form');
+      const input = document.getElementById('pw-input');
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+        if(input.value === PASSWORD){
+          overlay.style.display = 'none';
+        } else {
+          input.value = '';
+          input.focus();
+          alert('Incorrect password');
+        }
+      });
+      // Optional: prevent tabbing to page content while overlay visible
+      document.addEventListener('focus', function(ev){
+        if(overlay.style.display !== 'none' && !overlay.contains(ev.target)) ev.stopPropagation();
+      }, true);
+    })();
+  </script>
+
+  <div class="question">
+  <p>
+    <strong>I</strong>
+Qalay va qo‘rg‘oshin nisbatan past haroratlarda ham erishini siz yaxshi bilasiz. Ularning erishi uchun 200–300 °C orasidagi harorat kifoya qiladi. Shunday bir metall borki, hatto suyuq holatda ham uchraydi. Bu davriy jadvaldagi 80-raqamli element simob hisoblanadi. Simob suv muzlaydigan haroratdan, ya’ni selsiy bo‘yicha 0 °C dan ham –39 daraja past haroratdagina qotadi. 1759-yilgacha hech kim simobni qattiq holatga o‘tkazishga urinib ham ko‘rmagan, chunki hech kim simobning, aslida, metall ekanini bilmagan. Simobning ingliz tilidagi va xalqaro ilmiy nomi esa “mercury” bo‘lib, u zamonaviy kimyoga o‘rta asr alkimyogarlaridan meros qolgan. O‘rta asr alkimyogarlari o‘zlari tanish bo‘lgan kam sonli elementlarni osmon jismlarining nomlari bilan atash an’anasiga ega bo‘lishgan. Alkimyogarlar astrologiyadan ham uncha-muncha boxabar bo‘lishgan. Odatda, bunday odamlar o‘zlarini “ilohiy xislat”lar egasi deb hisoblashgan. Alkimyogarlardan ayrimlari fol ko‘rish va shamanlik qilish bilan ham shug‘ullanishgan.
+<hr>
+<strong>II</strong>
+Simob og‘ir modda, temirdan ko‘ra ikki barobar va qo‘rg‘oshindan ko‘ra uchdan bir hissa og‘irroq. Xona haroratida eng og‘sir suyuqlik bo‘lganligi uchun simobdan ob-havoni bashorat qilishda foydalanish mumkin. Atmosfera bosimi bilan muvozanatlanadigan simob bilan to‘ldirilgan shisha nay barometr deyiladi, bosim aynan barometr bilan o‘lchanadi. Simob haroratni o‘lchash asboblarida ham keng qo‘sullanadi. Dori qutichada turadigan termometr ichida aynan simob bo‘ladi. Shuningdek, u elektr tokini o‘tkazadigan modda sanaladi. Simob va uning birikmalari zaharli hisoblanadi. Simob ko‘splab metallar bilan qotishmalar hosil qiladi va ular fanda turli xil nomlar bilan ataladi.
+<hr>
+<strong>III</strong>
+Masalan, kumush va simob qotishmasi kumush amalgamasi deyiladi. Tish davolovchi vrachlar tishlardagi kovaklar o‘rniga shunday kumush amalgamasidan to‘ldirish orqali kovaklarni berkitadilar. Odam va hayvonlar organizmida 10⁻⁶% simob bo‘ladi. Simob organizmda Si, Sn, Cd, Se mikroelementlarining singishi va almashinuvida yordam beradi. Simob oltin bilan ham tez va oson aralashib, qotishma hosil qiladi. Simob bilan ta’sirlashgan tilla taqinchoq o‘zining yarqiroq jilvasini darhol yo‘qotib, xira va nursiz bo‘lib qoladi. Simob, shuningdek, maxsus lampalarda qo‘llanadi.
+<hr>
+<strong>IV</strong>
+Simobning ko‘p birikmalari fanga ma’lum. Simob xloridi, u avvalari kalomel nomi bilan ko‘pchilikka yaxshi tanish bo‘lgan. Ko‘p yillar mobaynida uncha-muncha odamning ichak va hazm qilish tizimini ishdan chiqargan. Simob oksidi pishiq g‘ishtning rangidagi qizg‘sish-qo‘ng‘ir modda bo‘lib, Jozef Pristli kislorodni kashf qilgan tajribalarda aynan simob oksidini qizdirgan edi. Simobning yana bir qizg‘sish rangli birikmasi simob sulfidi bo‘lib, tabiatda eng keng tarqalgan simob birikmasi hisoblanadi, uni simob rudasi ham deyish mumkin. Simobning yana paqildoq simob nomli birikmasi ham qiziq tabiatga ega. Paqildoq simob arzimagan nozik tegini sh tufayli ham paqillab, portlash sodir qiladi. Shu sababli portlatish texnikasida, masalan, tog‘s-kon ishlarida simob fulminati nisbatan qiyin portlaydigan moddalarni, masalan, dinamitni portlatish uchun detonator sifatida ishlatiladi. Simobning avvalari tibbiyotda keng qo‘sullan gan birikmalaridan biri merkuraxrom bo‘lib, antiseptik xossasiga ega, undan yaralarni davolashda foydalanilgan. Shuningdek, bu modda boshqa simob birikmalaridan ko‘ra ko‘sproq uchraydi.</p>
+   <p>Raqamlab ko‘satilgan qaysi bandda matn
+   mazmuniy tuzilishida <strong>uslubiy xatolikni
+   yuzaga keltirgan gap qatnashgan?</strong></p>
+  <ul class="list">
+    <li class="style"><label><input type="radio" name="q1" value="3"> a) I</label></li>
+    <li class="style"><label><input type="radio" name="q1" value="4"> b) II</label></li>
+    <li class="style"><label><input type="radio" name="q1" value="5"> c) III</label></li>
+    <li class="style"><label><input type="radio" name="q1" value="6"> d) IV</label></li>
+  </ul>
+  <button id="submit1">Submit</button>
+  <p id="result1"></p>
+</div>
+
+<script>
+document.getElementById('submit1').addEventListener('click', function(){
+  const selected = document.querySelector('input[name="q1"]:checked');
+  const resultEl = document.getElementById('result1');
+  if (!selected) {
+    resultEl.textContent = 'Tanlasenchi bittasini.';
+  } else {
+    if (selected.value === '6') {
+      resultEl.textContent = 'To\'g\'ri! (^///^)  "A+" ( ͡° ͜ʖ ͡°) eslab qoling';
+    } else {
+      resultEl.textContent = 'Noto\'ri -_-.';
+    }
+  }
+});
+</script> 
+</body>
+</html>
